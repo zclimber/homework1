@@ -1,7 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="ru.ifmo.android_2016.calc.CalculatorActivity">
 
-</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:textSize="@dimen/_40sdp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/format1"/>
+
+        <TextView
+            android:textSize="@dimen/_40sdp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/format2" />
+
+    </LinearLayout>
+
+    <TextView
+        android:textSize="@dimen/_40sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:visibility="invisible"
+        android:id="@+id/sizeExample"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.GridLayout
+        app:columnCount="4"
+        app:rowCount="4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/gridLayout"
+        android:layout_below="@+id/linearLayout">
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1"
+            android:id="@+id/d1" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2"
+            android:id="@+id/d2" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_3"
+            android:id="@+id/d3" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onActionPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_slash"
+            android:id="@+id/div" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4"
+            android:id="@+id/d4" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_5"
+            android:id="@+id/d5" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_6"
+            android:id="@+id/d6" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onActionPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_star"
+            android:id="@+id/mul" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_7"
+            android:id="@+id/d7" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_8"
+            android:id="@+id/d8" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onDigitPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_9"
+            android:id="@+id/d9" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="onActionPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_minus"
+            android:id="@+id/sub" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            app:layout_columnSpan="1"
+            android:textSize="@dimen/_20sdp"
+            android:onClick="onDigitPress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:id="@+id/d0" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            android:onClick="clearState"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_clear"
+            android:id="@+id/clear" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            app:layout_columnSpan="1"
+            android:onClick="onActionPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_equal"
+            android:id="@+id/eqv" />
+
+        <Button
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowSpan="1"
+            android:onClick="onActionPress"
+            android:textSize="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_plus"
+            android:id="@+id/add" />
+
+    </android.support.v7.widget.GridLayout>
+
+
+    <TextView
+        android:text=""
+        android:textColor="#C0C0C0"
+        android:textSize="@dimen/_40sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history"
+        android:layout_gravity="bottom"
+        android:layout_above="@id/gridLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:text="@string/_0"
+        android:textSize="@dimen/_40sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:layout_above="@id/gridLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
